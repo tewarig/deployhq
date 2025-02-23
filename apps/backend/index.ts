@@ -5,7 +5,7 @@ import { getServerStats } from "./modules/cpu-monitor"
 
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 
 app.get('/server-stats', async (req, res) => {
