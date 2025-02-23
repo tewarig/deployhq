@@ -29,17 +29,13 @@ then
     echo "pnpm not found, installing..."
     npm install -g pnpm
 fi
-
-# Navigate to the backend directory
-cd apps/backend
-
 # Install dependencies using pnpm
-pnpm install
+pnpm --filter apps/backend install
 
 # Build the TypeScript project
-pnpm run build
+pnpm --filter apps/backend run build
 
 # Start the backend server
-pnpm run start
+pnpm --filter apps/backend run start
 
 
